@@ -16,6 +16,9 @@ data = load_data()
 # Display the table
 st.write(data)
 
+
+st.title("Exploratory Data Analysis")
+
 # Exploratory Data Analysis (EDA)
 data['Age'] = 2023 - data['Year_Birth']
 data['Dt_Customer'] = pd.to_datetime(data['Dt_Customer'], format='%Y-%m-%d')
