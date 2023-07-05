@@ -25,7 +25,7 @@ st.header("Get to Know Me & Stay Connected")
 st.markdown(
     """
     - 🌐 Website: [Customer Segmentation](https://identifying-high-value-customers-through-cluster-based-analysis.streamlit.app/)
-    - 💬 Discord: [Join our Community](https://discord.com/channels/Kumaran_bk#4541)
+    - 💬 Discord: [Join our Community](https://discord.gg/MAqKaCUz)
     - 💼 LinkedIn: [Connect with me](https://www.linkedin.com/in/balachandran-kumaran-4363361a8/)
     - 📸 Instagram: [Follow me](https://www.instagram.com/kumaran_bk/)
     """
