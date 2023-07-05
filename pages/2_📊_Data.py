@@ -135,16 +135,3 @@ for p in ax6.patches:
 
 plt.tight_layout()
 st.pyplot(plt.gcf())
-
-# Correlation Heatmap
-plt.figure(figsize=(10, 8))
-corr = data.corr()
-sns.heatmap(corr, cmap='coolwarm', annot=True, fmt=".2f", linewidths=0.5)
-plt.title('Correlation Heatmap', pad=10, fontsize=15, fontweight='semibold')
-st.pyplot(plt.gcf())
-
-# Missing Values Matrix
-plt.figure(figsize=(8, 6))
-mn.matrix(data, sparkline=False, fontsize=8, figsize=(8, 6))
-plt.title('Missing Values Matrix', pad=10, fontsize=15, fontweight='semibold')
-st.pyplot(plt.gcf())
