@@ -17,7 +17,7 @@ if submit:
         mailto_link = f"mailto:bkumaran98@gmail.com?subject=New contact form submission&body={message}"
 
         # Display link to open user's default email client
-        st.markdown(f"[Click here to send email](mailto:{email}?subject=New contact form submission&body={message})")
+        #st.markdown(f"[Click here to send email](mailto:{email}?subject=New contact form submission&body={message})")
         st.success("Thank you for your message. We will get in touch with you soon.")
 
 # Contact information with emoji icons
