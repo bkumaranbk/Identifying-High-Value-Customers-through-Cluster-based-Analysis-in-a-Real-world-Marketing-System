@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pickle
 
-filename = '../best_classification_algorithm.sav'
+filename = 'best_classification_algorithm.sav'
 loaded_model = pickle.load(open(filename, 'rb'))
-df = pd.read_csv("../data_with_clusters.csv")
+df = pd.read_csv("data_with_clusters.csv")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.markdown('<style>body{background-color: Blue;}</style>', unsafe_allow_html=True)
