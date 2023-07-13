@@ -21,7 +21,7 @@ st.title("Exploratory Data Analysis")
 
 # Exploratory Data Analysis (EDA)
 data['Age'] = 2023 - data['Year_Birth']
-data['Dt_Customer'] = pd.to_datetime(data['Dt_Customer'], format='%Y-%m-%d')
+data['Dt_Customer'] = pd.to_datetime(data['Dt_Customer'], format='%d/%m/%Y')
 data['Years_customer'] = (pd.Timestamp('now').year) - (pd.to_datetime(data['Dt_Customer']).dt.year)
 data['Total_Expenses'] = data['MntWines'] + data['MntFruits'] + data['MntMeatProducts'] + data['MntFishProducts'] + data['MntSweetProducts'] + data['MntGoldProds']
 data['Total_Acc_Cmp'] = data['AcceptedCmp1'] + data['AcceptedCmp2'] + data['AcceptedCmp3'] + data['AcceptedCmp4'] + data['AcceptedCmp5'] + data['Response']
