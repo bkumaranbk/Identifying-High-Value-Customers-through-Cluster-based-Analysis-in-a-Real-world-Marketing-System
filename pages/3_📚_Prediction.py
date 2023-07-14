@@ -76,6 +76,56 @@ if submitted:
 
     clust = loaded_model.predict(data)[0]
     st.write('Data belongs to Cluster', clust)
+	
+	# Cluster Explanation with Color-coded Cards and Average/Below Average Labels
+    if clust == 0:
+        st.markdown(
+            f'<div style="border: 2px solid green; padding: 10px; border-radius: 5px;"><h3>Cluster 0 - Average</h3>'
+            f'<p>This data belongs to Cluster 0.</p>'
+            f'<p>Cluster 0 represents customers with a relatively average level of engagement.</p>'
+            f'<p>They make a moderate number of purchases through stores, spending a significant amount on wine products.</p>'
+            f'<p>The median income level and age suggest a typical customer profile.</p>'
+            f'<p>Customers in this cluster do not make many catalog purchases.</p></div>',
+            unsafe_allow_html=True
+        )
+
+     elif clust == 1:
+        st.markdown(
+            f'<div style="border: 2px solid blue; padding: 10px; border-radius: 5px;"><h3>Cluster 1 - Below Average</h3>'
+            f'<p>This data belongs to Cluster 1.</p>'
+            f'<p>Cluster 1 represents customers with a below-average level of engagement.</p>'
+            f'<p>They have the lowest income level and show minimal interest in catalog purchases.</p>'
+            f'<p>Customers in this cluster spend the least amount on wine products.</p></div>',
+            unsafe_allow_html=True
+        )
+
+    elif clust == 2:
+        st.markdown(
+            f'<div style="border: 2px solid red; padding: 10px; border-radius: 5px;"><h3>Cluster 2 - Average</h3>'
+            f'<p>This data belongs to Cluster 2.</p>'
+            f'<p>Cluster 2 represents customers with a higher level of engagement and purchasing power.</p>'
+            f'<p>They have the highest income level, spending the largest amount on all types of products.</p>'
+            f'<p>The relatively moderate number of customers in this cluster suggests exclusivity and targeted marketing opportunities.</p></div>',
+            unsafe_allow_html=True
+        )
+
+    elif clust == 3:
+        st.markdown(
+            f'<div style="border: 2px solid orange; padding: 10px; border-radius: 5px;"><h3>Cluster 3 - Average</h3>'
+            f'<p>This data belongs to Cluster 3.</p>'
+            f'<p>Cluster 3 represents customers with an above-average level of engagement.</p>'
+            f'<p>They spend a significant amount on meat and wine products, as well as a moderate amount on fish products.</p>'
+            f'<p>Customers in this cluster show a high number of store purchases and have a high income level.</p></div>',
+            unsafe_allow_html=True
+        )
+
+    else:
+        st.markdown(
+            f'<div style="border: 2px solid gray; padding: 10px; border-radius: 5px;"><h3>Unknown Cluster</h3>'
+            f'<p>This data does not belong to any specific cluster.</p></div>',
+            unsafe_allow_html=True
+        )
+
 
     #cluster_df1 = df[df['Cluster'] == clust]
     #plt.rcParams["figure.figsize"] = (20, 3)
