@@ -80,42 +80,47 @@ if submitted:
 	# Cluster Explanation with Color-coded Cards and Average/Below Average Labels
     if clust == 0:
         st.markdown(
-            f'<div style="border: 2px solid green; padding: 10px; border-radius: 5px;"><h3>Cluster 0 - Average</h3>'
+            f'<div style="border: 2px solid blue; padding: 10px; border-radius: 5px;"><h3>Cluster 0 - Average</h3>'
             f'<p>This data belongs to Cluster 0.</p>'
-            f'<p>Cluster 0 represents customers with a relatively average level of engagement.</p>'
-            f'<p>They make a moderate number of purchases through stores, spending a significant amount on wine products.</p>'
-            f'<p>The median income level and age suggest a typical customer profile.</p>'
-            f'<p>Customers in this cluster do not make many catalog purchases.</p></div>',
+            f'<p>This cluster represents the least number of customers, suggesting a smaller customer base.</p>'
+            f'<p>Customers in this cluster make a relatively large number of purchases through stores, indicating a preference for in-store shopping.</p>'
+            f'<p>They spend a significant amount on wine products, suggesting a potential interest in wine consumption.</p>'
+            f'<p>The median income level of this cluster indicates an average income range.</p>'
+			f'<p>Customers in this cluster do not make many catalog purchases, indicating a lower engagement with catalog marketing.</p></div>',
             unsafe_allow_html=True
         )
 
     elif clust == 1:
         st.markdown(
-            f'<div style="border: 2px solid blue; padding: 10px; border-radius: 5px;"><h3>Cluster 1 - Below Average</h3>'
+            f'<div style="border: 2px solid red; padding: 10px; border-radius: 5px;"><h3>Cluster 1 - Below Average</h3>'
             f'<p>This data belongs to Cluster 1.</p>'
-            f'<p>Cluster 1 represents customers with a below-average level of engagement.</p>'
-            f'<p>They have the lowest income level and show minimal interest in catalog purchases.</p>'
-            f'<p>Customers in this cluster spend the least amount on wine products.</p></div>',
+            f'<p>This cluster has the largest number of customers, indicating a larger customer base.</p>'
+            f'<p>Customers in this cluster have the lowest income level, suggesting a lower purchasing power compared to other clusters.</p>'
+            f'<p>They are not accustomed to making catalog purchases, indicating a lower interest or engagement with catalog marketing.</p>'
+			f'<p>The least amount of money is spent on wine products in this cluster, indicating a lower preference for wine consumption.</p></div>',
             unsafe_allow_html=True
         )
 
     elif clust == 2:
         st.markdown(
-            f'<div style="border: 2px solid red; padding: 10px; border-radius: 5px;"><h3>Cluster 2 - Average</h3>'
+            f'<div style="border: 2px solid green; padding: 10px; border-radius: 5px;"><h3>Cluster 2 - High</h3>'
             f'<p>This data belongs to Cluster 2.</p>'
-            f'<p>Cluster 2 represents customers with a higher level of engagement and purchasing power.</p>'
-            f'<p>They have the highest income level, spending the largest amount on all types of products.</p>'
-            f'<p>The relatively moderate number of customers in this cluster suggests exclusivity and targeted marketing opportunities.</p></div>',
+            f'<p>This cluster represents customers with the highest income level, indicating stronger purchasing power compared to other clusters.</p>'
+            f'<p>Customers in this cluster spend the largest amount on all types of products, suggesting a higher level of engagement and willingness to invest in various items.</p>'
+            f'<p>The relatively moderate number of customers in this cluster suggests exclusivity and targeted marketing opportunities.</p>'
+			f'<p>The cluster includes a relatively moderate number of customers, indicating exclusivity and potentially a more targeted customer segment.</p></div>',
             unsafe_allow_html=True
         )
 
     elif clust == 3:
         st.markdown(
-            f'<div style="border: 2px solid orange; padding: 10px; border-radius: 5px;"><h3>Cluster 3 - Average</h3>'
+            f'<div style="border: 2px solid orange; padding: 10px; border-radius: 5px;"><h3>Cluster 3 - Above Average</h3>'
             f'<p>This data belongs to Cluster 3.</p>'
-            f'<p>Cluster 3 represents customers with an above-average level of engagement.</p>'
-            f'<p>They spend a significant amount on meat and wine products, as well as a moderate amount on fish products.</p>'
-            f'<p>Customers in this cluster show a high number of store purchases and have a high income level.</p></div>',
+            f'<p>Customers in this cluster spend a large amount on meat and wine products, indicating a preference for these items.</p>'
+            f'<p>They also spend a moderate amount on fish products, suggesting a moderate interest in seafood.</p>'
+			f'<p>The cluster has a high number of store purchases, indicating a preference for in-store shopping.</p>'
+			f'<p>Customers in this cluster have a high income level, suggesting strong purchasing power.</p>'
+            f'<p>It has a moderate number of customers, indicating a more targeted segment.</p></div>',
             unsafe_allow_html=True
         )
 
