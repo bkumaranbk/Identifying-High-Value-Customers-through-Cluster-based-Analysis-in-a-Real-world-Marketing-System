@@ -1,6 +1,19 @@
 import streamlit as st
 
-st.title("Contact Us")
+import streamlit as st
+
+def hide_menu():
+    hide_css = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+    st.markdown(hide_css, unsafe_allow_html=True)
+
+hide_menu()
+
+
+st.title("Contact Me")
 
 # Contact form inputs
 name = st.text_input("Name")

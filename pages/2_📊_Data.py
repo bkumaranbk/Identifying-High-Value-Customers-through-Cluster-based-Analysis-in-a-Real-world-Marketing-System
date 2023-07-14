@@ -6,6 +6,36 @@ import missingno as mn
 
 st.title("Datasets")
 
+import streamlit as st
+
+def hide_menu():
+    hide_css = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+    st.markdown(hide_css, unsafe_allow_html=True)
+
+hide_menu()
+
+def hide_running_indicator():
+    hide_css = """
+        <style>
+        .element-container .stProgress > div > div > div > div > div:nth-child(2),
+        .element-container .stProgress > div > div > div > div > div:nth-child(3),
+        .element-container .stProgress > div > div > div > div > div:nth-child(4) {
+            visibility: hidden;
+        }
+
+        .element-container .stProgress > div > div > div > div > div:nth-child(1)::before {
+            background-color: #000000;
+        }
+        </style>
+        """
+    st.markdown(hide_css, unsafe_allow_html=True)
+
+hide_running_indicator()
+
 @st.cache(allow_output_mutation=True)
 def load_data():
     data = pd.read_csv("marketing_campaign.csv")  # Assuming your file is in CSV format

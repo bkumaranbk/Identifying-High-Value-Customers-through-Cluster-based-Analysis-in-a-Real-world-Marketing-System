@@ -1,9 +1,24 @@
 import streamlit as st
 
+def hide_menu():
+    hide_css = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+    st.markdown(hide_css, unsafe_allow_html=True)
+
+# Configure page title and icon
 st.set_page_config(
     page_title="Customer Segmentation",
-    page_icon="👋",
+    page_icon="🏡",
 )
+
+# Call the hide_menu() function here
+hide_menu()
+
+# Your Streamlit app code goes here
+
 
 st.title("Identifying High-Value Customers through Cluster-based Analysis in a Real-world Marketing System")
 
