@@ -89,7 +89,7 @@ if submitted:
             unsafe_allow_html=True
         )
 
-     elif clust == 1:
+    elif clust == 1:
         st.markdown(
             f'<div style="border: 2px solid blue; padding: 10px; border-radius: 5px;"><h3>Cluster 1 - Below Average</h3>'
             f'<p>This data belongs to Cluster 1.</p>'
