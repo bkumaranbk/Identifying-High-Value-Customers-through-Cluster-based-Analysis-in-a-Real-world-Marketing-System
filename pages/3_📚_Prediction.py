@@ -86,18 +86,18 @@ if submitted:
         #plt.show()
         #st.pyplot(figsize=(5, 5))
 
-st.header("Description With Cluster Summary")
-def load_data():
-    data = pd.read_csv("description_cluster.csv")  # Assuming your file is in CSV format
-    return data
+    st.header("Description With Cluster Summary")
+    def load_data():
+        data = pd.read_csv("description_cluster.csv")  # Assuming your file is in CSV format
+        return data
 
-data = load_data()
+    data = load_data()
 
-# Display the table
-st.write(data)
+    # Display the table
+    st.write(data)
 
 
-# Cluster Summary
-st.header("Cluster Summary")
-cluster_summary = df.groupby("Cluster").mean()
-st.dataframe(cluster_summary)
+    # Cluster Summary
+    st.header("Cluster Summary")
+    cluster_summary = df.groupby("Cluster").mean()
+    st.dataframe(cluster_summary)
