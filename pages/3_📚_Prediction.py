@@ -41,7 +41,7 @@ def validate_form():
     required_fields = [income, kidhome, teenhome, recency, mnt_wines, mnt_fruits, mnt_meat_products,
                        mnt_fish_products, mnt_sweet_products, mnt_gold_prods, num_deals_purchases,
                        num_web_purchases, num_catalog_purchases, num_store_purchases,
-                       num_web_visits_month, age, years_customer, total_expenses, total_acc_cmp]
+                       num_web_visits_month, response, age, years_customer, total_expenses, total_acc_cmp]
     
     for field in required_fields:
         if field is None:
@@ -51,7 +51,7 @@ def validate_form():
 st.title("Prediction")
 
 with st.form("my_form"):
-    col1, col2, col3 = st.columns(3)  # Split the columns into three
+    col1, col2, col3, col4 = st.columns(4)  # Split the columns into four
 
     with col1:
         income = st.number_input(label='Income *', step=0.001, format="%.2f")
@@ -80,7 +80,11 @@ with st.form("my_form"):
         marital_status_selection = st.selectbox(label='Marital Status *', options=list(marital_status_mapping.keys()))
         education_selection = st.selectbox(label='Education *', options=list(education_mapping.keys()))
 
+    with col4:
+        response = st.number_input(label='Response (1 or 0) *', step=1, min_value=0, max_value=1)
+
     submitted = st.form_submit_button("Submit")
+
 
 if submitted:
     if validate_form():
@@ -107,6 +111,7 @@ if submitted:
         'NumCatalogPurchases': [num_catalog_purchases],
         'NumStorePurchases': [num_store_purchases],
         'NumWebVisitsMonth': [num_web_visits_month],
+		'Response': [response],
         'Age': [age],
         'Years_customer': [years_customer],
         'Total_Expenses': [total_expenses],
