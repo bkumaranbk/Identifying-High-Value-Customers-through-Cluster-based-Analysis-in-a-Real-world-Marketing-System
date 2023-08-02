@@ -51,7 +51,7 @@ def validate_form():
 st.title("Prediction")
 
 with st.form("my_form"):
-    col1, col2, col3, col4 = st.columns(4)  # Split the columns into four
+    col1, col2, col3 = st.columns(3)  # Split the columns into four
 
     with col1:
         income = st.number_input(label='Income *', step=0.001, format="%.2f")
@@ -79,8 +79,6 @@ with st.form("my_form"):
         total_acc_cmp = st.number_input(label='Total Acc_Cmp *', step=1, min_value=0)
         marital_status_selection = st.selectbox(label='Marital Status *', options=list(marital_status_mapping.keys()))
         education_selection = st.selectbox(label='Education *', options=list(education_mapping.keys()))
-
-    with col4:
         response = st.number_input(label='Response (1 or 0) *', step=1, min_value=0, max_value=1)
 
     submitted = st.form_submit_button("Submit")
