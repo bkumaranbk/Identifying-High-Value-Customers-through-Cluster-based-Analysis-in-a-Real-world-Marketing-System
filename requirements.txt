@@ -1,4 +1,4 @@
-﻿altair==5.0.1
+altair==5.0.1
 attrs==23.1.0
 blinker==1.6.2
 cachetools==5.3.1
@@ -12,7 +12,7 @@ decorator==5.1.1
 docopt==0.6.2
 fonttools==4.40.0
 gitdb==4.0.10
-GitPython==3.1.31
+GitPython==3.1.59
 idna==3.4
 importlib-metadata==6.7.0
 itsdangerous==2.1.2
